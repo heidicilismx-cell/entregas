@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda de Entregas - Empresa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsivo -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    nav {
+      background: #3b82f6;
+      padding: 10px 30px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    }
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 20px;
+    }
+    form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .full-width {
+      grid-column: span 2;
+    }
+    button {
+      margin-top: 20px;
+      background: #1e3a8a;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      grid-column: span 2;
+    }
+    button:hover {
+      background: #3b82f6;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+      .full-width {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div style="display:flex; align-items:center; flex-wrap:wrap;">
+      <img src="logo.png" alt="Logotipo">
+      <h1>Mi Empresa</h1>
+    </div>
+    <nav>
+    <a href="#">Acceso</a>
+    <a href="#">Instrucciones</a>
+  </nav>
+  </header>
+
+
+
+  <!-- Formulario -->
+   <div>
+   <div class="container" display: flex;>
+    <H2>Hola</H2>
+   </div>
+  <div class="container" display: flex;>
+    <h2>Agendar Entrega</h2>
+    <form>
+      <div>
+        <label for="nombre">Nombre del cliente:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <br>
+      <div>
+        <label for="apellidos">Apellidos del cliente:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+      </div>
+      <br>
+      <div>
+        <label for="telefono">Número de teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+      <br>
+      <div>
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <br>
+      <div>
+        <label for="unidad">Unidad a entregar:</label>
+        <input type="text" id="unidad" name="unidad" required>
+      </div>
+      <br>
+      <div>
+        <label for="vin">VIN de la unidad:</label>
+        <input type="text" id="vin" name="vin" required>
+      </div>
+      <br>
+      <div>
+        <label for="color">Color de la unidad:</label>
+        <input type="text" id="color" name="color" required>
+      </div>
+      <br>
+      <div>
+        <label for="bahia">Bahía de entrega:</label>
+        <select id="bahia" name="bahia" required>
+          <option value="">Seleccione...</option>
+          <option value="1">Bahía 1</option>
+          <option value="2">Bahía 2</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label for="fecha">Fecha de entrega:</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+      <br>
+      <div>
+        <label for="hora">Hora de entrega:</label>
+        <select id="hora" name="hora" required>
+          <option value="">Seleccione...</option>
+          <option>09:30</option>
+          <option>10:00</option>
+          <option>10:30</option>
+          <option>11:00</option>
+          <option>11:30</option>
+          <option>12:00</option>
+          <option>12:30</option>
+          <option>13:00</option>
+          <option>13:30</option>
+          <option>14:00</option>
+          <option>14:30</option>
+          <option>15:00</option>
+          <option>15:30</option>
+          <option>16:00</option>
+          <option>16:30</option>
+          <option>17:00</option>
+          <option>17:30</option>
+          <option>18:00</option>
+          <option>18:30</option>
+          <option>19:00</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label for="asesor">Asesor de ventas:</label>
+        <select id="asesor" name="asesor" required>
+          <option value="">Seleccione asesor...</option>
+          <option value="asesor1">Juan Pérez</option>
+          <option value="asesor2">María López</option>
+          <option value="asesor3">Carlos Sánchez</option>
+          <option value="asesor4">Laura Torres</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label for="password">Contraseña del asesor:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <br>
+      <button type="submit">Guardar Cita</button>
+    </form>
+  </div>
+  </div>
+</body>
+</html>
+
